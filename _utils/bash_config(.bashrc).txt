@@ -1,0 +1,30 @@
+
+PATH="/usr/local/sbin:$PATH"
+
+echo -n "Uptime: "; uptime
+echo ""
+
+PS1="[\W] \u >"
+MYNAME='Kenneth Dait'
+export MYNAME
+export LESS='-R'
+
+if [ -f ~/.git-completion.bash ]; then
+  source ~/.git-completion.bash
+fi
+
+alias kenbash='source ~/.bashrc'
+alias l='echo "******************************************"; echo -n "Directory contents of: "; pwd; echo "******************************************"; ls -GhF1A'
+alias lc='clear; echo "******************************************"; echo -n "Directory contents of: "; pwd; echo "******************************************"; ls -GhF1A'
+alias x='exit'
+alias home='cd ~'
+alias up='cd ..'
+alias h='history'
+alias c='clear'
+alias df='df -h' #Human-readable file size output
+alias du='du -h'
+alias mkdir='mkdir -p'
+alias kenhttpd='ps aux | grep httpd | grep -v "grep httpd"'
+alias x='exit'
+alias lcgit='clear; echo "******************************************"; echo -n "Directory contents of: "; pwd; echo "******************************************"; ls -GhF1A; git status'
+alias kend_scripting='clear;cd ~/Documents/kend_scripting/;git status;l'
